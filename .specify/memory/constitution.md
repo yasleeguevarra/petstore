@@ -1,50 +1,55 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!--
+Sync Impact Report
+- Version change: uninitialized -> 1.0.0
+- Modified principles: added product-first commerce, fullstack alignment, maintainable platform, operational readiness, data and security
+- Added sections: Technical Constraints, Development Workflow
+- Removed sections: none
+- Templates requiring updates: ✅ .specify/templates/plan-template.md, ✅ .specify/templates/spec-template.md, ✅ .specify/templates/tasks-template.md, ✅ .specify/templates/checklist-template.md
+- Follow-up TODOs: none
+-->
+
+# PetStore Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. Product-first commerce
+Every architectural and user-experience decision MUST support a secure, discoverable pet commerce experience for dogs, cats, birds, and fish. Product definitions, ordering flows, pricing, and inventory visibility are non-negotiable; every feature must clearly advance the petstore marketplace goal.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### II. Fullstack alignment
+Backend, frontend, data model, and deployment MUST be designed as one cohesive application, not separate proof-of-concepts. UI behavior, API contracts, and deployment artifacts MUST stay synchronized through the project lifecycle.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### III. Maintainable platform
+The solution MUST use Java Spring Boot for server logic, React for the frontend, Tailwind and MUI for styling, and Postgres for persistent state. Code MUST be organized for readability, modularity, and long-term maintenance.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### IV. Operational readiness
+The project MUST be containerized with Docker and built for Render free-tier deployment. Infrastructure decisions MUST prioritize reproducible, cost-conscious deployment and clearly defined configuration for development, staging, and production.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### V. Data, security, and naming discipline
+Petstore data MUST reside in Postgres and sensitive behavior MUST be protected by validation, error handling, and least-privilege practices. All backend API paths MUST use the surname segment `guevarra`, and Java packages MUST include `guevarra` to keep the implementation consistent and traceable.
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+## Technical Constraints
+The application architecture MUST satisfy these constraints:
+- Backend language: Java Spring Boot
+- Database: PostgreSQL
+- Frontend: React with Tailwind CSS and MUI
+- Containerization: Docker for both backend and frontend
+- Deployment target: Render free-tier services only
+- API path convention: include `/guevarra/` in route prefixes
+- Java package convention: include `guevarra` in package names, e.g. `com.guevarra.petstore`
+- No proprietary hosting assumptions: design for the limitations of free-tier Render services
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
-
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
-
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+## Development Workflow
+All production work MUST follow these workflow rules:
+- Changes MUST be delivered through pull requests with review and approval
+- Unit and integration tests MUST accompany backend and frontend changes
+- Feature work MUST be validated against the constitution at key checkpoints
+- Environment configuration MUST be explicit and container-friendly
+- Documentation of deployment and configuration MUST be kept with source code
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
+This constitution supersedes informal practices for the PetStore project.
+Amendments require documented rationale, approval by the project team, and an update to this file.
+Compliance reviews MUST occur before major milestones and before any Render deployment.
+Decisions that affect architecture, deployment, or stack constraints MUST be captured in project documentation.
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
-
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0.0 | **Ratified**: 2026-05-06 | **Last Amended**: 2026-05-06

@@ -22,8 +22,7 @@ function App() {
         <Route path="/order-confirmation" element={<OrderConfirmationPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-      </Router>
-    </AuthProvider>
+    </Router>
   )
 }
 

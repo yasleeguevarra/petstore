@@ -18,7 +18,7 @@ const mockPets = [
     age: 2,
     description: 'Friendly and loyal family dog',
     isAvailable: true,
-    imageUrl: 'https://loremflickr.com/300/200/animal?random=1',
+    imageUrl: 'https://loremflickr.com/320/240/golden+retriever?lock=1',
     createdAt: '2026-01-01T00:00:00Z',
     updatedAt: '2026-01-01T00:00:00Z'
   },
@@ -31,7 +31,7 @@ const mockPets = [
     age: 1,
     description: 'Elegant and calm Persian cat',
     isAvailable: true,
-    imageUrl: 'https://loremflickr.com/300/200/animal?random=2',
+    imageUrl: 'https://loremflickr.com/320/240/cat?lock=104',
     createdAt: '2026-01-01T00:00:00Z',
     updatedAt: '2026-01-01T00:00:00Z'
   },
@@ -44,7 +44,7 @@ const mockPets = [
     age: 3,
     description: 'Colorful and talkative parakeet',
     isAvailable: true,
-    imageUrl: 'https://loremflickr.com/300/200/animal?random=3',
+    imageUrl: 'https://loremflickr.com/320/240/bird?lock=108',
     createdAt: '2026-01-01T00:00:00Z',
     updatedAt: '2026-01-01T00:00:00Z'
   },
@@ -57,7 +57,7 @@ const mockPets = [
     age: 1,
     description: 'Cute and soft lop-eared rabbit',
     isAvailable: true,
-    imageUrl: 'https://picsum.photos/300/200?random=4',
+    imageUrl: 'https://loremflickr.com/320/240/rabbit?lock=4',
     createdAt: '2026-01-01T00:00:00Z',
     updatedAt: '2026-01-01T00:00:00Z'
   },
@@ -70,7 +70,7 @@ const mockPets = [
     age: 1,
     description: 'Small and active hamster',
     isAvailable: false,
-    imageUrl: 'https://picsum.photos/300/200?random=5',
+    imageUrl: 'https://loremflickr.com/320/240/hamster?lock=107',
     createdAt: '2026-01-01T00:00:00Z',
     updatedAt: '2026-01-01T00:00:00Z'
   },
@@ -83,7 +83,7 @@ const mockPets = [
     age: 3,
     description: 'Energetic and loyal Labrador',
     isAvailable: true,
-    imageUrl: 'https://picsum.photos/300/200?random=6',
+    imageUrl: 'https://loremflickr.com/320/240/labrador?lock=6',
     createdAt: '2026-01-01T00:00:00Z',
     updatedAt: '2026-01-01T00:00:00Z'
   },
@@ -96,7 +96,7 @@ const mockPets = [
     age: 2,
     description: 'Sleek and vocal Siamese cat',
     isAvailable: true,
-    imageUrl: 'https://picsum.photos/300/200?random=7',
+    imageUrl: 'https://loremflickr.com/320/240/cat?lock=105',
     createdAt: '2026-01-01T00:00:00Z',
     updatedAt: '2026-01-01T00:00:00Z'
   },
@@ -109,7 +109,7 @@ const mockPets = [
     age: 1,
     description: 'Colorful clownfish for aquariums',
     isAvailable: true,
-    imageUrl: 'https://picsum.photos/300/200?random=8',
+    imageUrl: 'https://loremflickr.com/320/240/clownfish?lock=8',
     createdAt: '2026-01-01T00:00:00Z',
     updatedAt: '2026-01-01T00:00:00Z'
   }
@@ -170,6 +170,15 @@ app.get('/api/guevarra/pets', (req, res) => {
   });
 });
 
+// GET /api/guevarra/pets/types - Get all pet types
+app.get('/api/guevarra/pets/types', (req, res) => {
+  const types = [...new Set(mockPets.map(p => p.type))].sort();
+  res.json({
+    success: true,
+    data: types
+  });
+});
+
 // GET /api/guevarra/pets/{id} - Get pet by ID
 app.get('/api/guevarra/pets/:id', (req, res) => {
   const pet = mockPets.find(p => p.id === parseInt(req.params.id));
@@ -182,15 +191,6 @@ app.get('/api/guevarra/pets/:id', (req, res) => {
   res.json({
     success: true,
     data: pet
-  });
-});
-
-// GET /api/guevarra/pets/types - Get all pet types
-app.get('/api/guevarra/pets/types', (req, res) => {
-  const types = [...new Set(mockPets.map(p => p.type))].sort();
-  res.json({
-    success: true,
-    data: types
   });
 });
 

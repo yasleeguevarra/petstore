@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="200">
+  <rect width="300" height="200" rx="24" fill="#E5F7FF"/>
+  <ellipse cx="150" cy="110" rx="65" ry="45" fill="#FDB813"/>
+  <polygon points="215,110 265,90 265,130" fill="#FDB813"/>
+  <polygon points="90,100 50,80 50,120" fill="#FDB813"/>
+  <circle cx="125" cy="95" r="10" fill="#FFF"/>
+  <circle cx="125" cy="95" r="4" fill="#000"/>
+  <path d="M140 125 C160 135, 170 125, 180 125" stroke="#FFF" stroke-width="4" fill="none"/>
+  <path d="M145 80 C150 90, 160 90, 165 80" stroke="#E58C00" stroke-width="5" fill="none"/>
+  <text x="110" y="186" font-family="sans-serif" font-size="22" fill="#B35A00">Nemo</text>
+</svg>

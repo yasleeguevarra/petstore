@@ -34,7 +34,7 @@ const SearchFilter = ({ onFilterChange, onClearFilters }) => {
     try {
       const response = await getPetTypes();
       if (response.success) {
-        setPetTypes(response.data.types);
+        setPetTypes(response.data);
       }
     } catch (error) {
       console.error('Error loading pet types:', error);

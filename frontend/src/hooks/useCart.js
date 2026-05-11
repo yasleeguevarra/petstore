@@ -1,6 +1,4 @@
-import { useState, useEffect, useCallback } from 'react';
-import { useAuth } from './useAuth';
-import cartApi from '../services/cartApi';
+import { useState, useEffect } from 'react';
 import { getPetById } from '../services/petApi';
 
 export const useCart = () => {
@@ -20,10 +18,6 @@ export const useCart = () => {
   useEffect(() => {
     setCartItems(localCart);
   }, [localCart]);
-
-  useEffect(() => {
-    loadCart();
-  }, [loadCart]);
 
   const addToCart = async (petId, quantity = 1) => {
     try {
@@ -88,7 +82,6 @@ export const useCart = () => {
     updateQuantity,
     removeFromCart,
     clearCart,
-    loadCart,
     getTotalItems,
     getTotalPrice
   };

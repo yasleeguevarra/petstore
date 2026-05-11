@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="200">
+  <rect width="300" height="200" rx="20" fill="#F7D7A0"/>
+  <circle cx="90" cy="90" r="55" fill="#A15E3C"/>
+  <circle cx="62" cy="70" r="10" fill="#FFF"/>
+  <circle cx="118" cy="70" r="10" fill="#FFF"/>
+  <circle cx="62" cy="70" r="5" fill="#000"/>
+  <circle cx="118" cy="70" r="5" fill="#000"/>
+  <ellipse cx="90" cy="115" rx="16" ry="12" fill="#000"/>
+  <path d="M30 100 C20 120, 20 155, 61 155 C102 155, 92 130, 30 100" fill="#A15E3C"/>
+  <path d="M150 100 C160 120, 160 155, 119 155 C78 155, 88 130, 150 100" fill="#A15E3C"/>
+  <text x="150" y="186" font-family="sans-serif" font-size="22" fill="#4A2C1A">DOG</text>
+</svg>

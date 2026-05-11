@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="200">
+  <rect width="300" height="200" rx="20" fill="#D8F1FF"/>
+  <ellipse cx="150" cy="110" rx="70" ry="42" fill="#2C7DA0"/>
+  <polygon points="220,110 265,85 265,135" fill="#2C7DA0"/>
+  <circle cx="120" cy="95" r="12" fill="#FFF"/>
+  <circle cx="120" cy="95" r="5" fill="#000"/>
+  <path d="M140 120 Q160 135, 180 120" stroke="#FFF" stroke-width="5" fill="none"/>
+  <text x="110" y="186" font-family="sans-serif" font-size="22" fill="#134E6F">FISH</text>
+</svg>
